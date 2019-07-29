@@ -1,47 +1,65 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 import './NossosServicos.scss'
-import image1 from '../../../static/image/servico-1.png'
-import image2 from '../../../static/image/servico-2.png'
-import image3 from '../../../static/image/servico-3.png'
 
 class NossosServicos extends Component{
+    constructor(props){
+        super(props)
+
+        this.state = {
+            estaCarregando: false,
+            listaNossoServicos: []
+        }
+
+        this.getServico = this.getServico.bind(this);
+    }
+
+
+    getServico(){
+        this.setState({
+            estaCarregando: true
+        })
+
+
+        axios.get('http://localhost:3001/Servico').then(response => {
+            this.setState({
+                estaCarregando: false,
+                listaNossoServicos: response.data
+            })
+        })
+    }
+
+    componentDidMount(){
+        this.getServico();
+    }
+
     render(){
+        const listaServicos = this.state.listaNossoServicos || []
+        const estaCarregando = this.state.estaCarregando
         
         return(
             <div className="col-xs-12 col-md-9 nossoservico">
                 <h2>NOSSOS SERVIÇOS</h2>
+                
+                {estaCarregando && <div className="loading-icon"></div>}
                 <ul className="col-xs-12 col-md-12 row">
-                    <li className="col-xs-12 col-md-4 row">
-                        <a href="#teste">
-                            <div className="col-xs-12 col-md-8 row imgservico">
-                                <img src={image1} alt="serviço 1" />
-                            </div>
-                            <h3>SITES</h3>
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <p>Nullam lacinia justo sit amet quam porta tempor. Etiam eros sem, mollis eget risus eget, viverra gravida orci. Sed non arcu id nulla fringilla ultricies. </p>
-                        </a>
-                    </li>
-                    <li className="col-md-4">
-                        <a href="#teste">
-                            <div className="col-md-8 row imgservico">
-                                <img src={image2} alt="serviço 2" />
-                            </div>
-                            <h3>APPS</h3>
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <p>Nullam lacinia justo sit amet quam porta tempor. Etiam eros sem, mollis eget risus eget, viverra gravida orci. Sed non arcu id nulla fringilla ultricies. </p>
-                        </a>
-                    </li>
-                    <li className="col-md-4">
-                        <a href="#teste">
-                            <div className="col-md-8 row imgservico">
-                                <img src={image3} alt="serviço 3" />
-                            </div>
-                            <h3>MKT DIGITAL</h3>
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <p>Nullam lacinia justo sit amet quam porta tempor. Etiam eros sem, mollis eget risus eget, viverra gravida orci. Sed non arcu id nulla fringilla ultricies. </p>
-                        </a>
-                    </li>
+                    {
+                        listaServicos.map((item, i) =>
+                                <React.Fragment key={item.Posicao}>
+                                    <li className={i === 0 ? "col-xs-12 col-md-4 row": "col-xs-12 col-md-4"}>
+                                        <a href={item.URL}>
+                                            <div className="col-xs-12 col-md-8 row imgservico">
+                                                <img src={require('../../../static/image/'+item.Imagem)} alt={item.Titulo} />
+                                            </div>
+                                            <h3>{item.Titulo}</h3>
+                                            <h4>{item.Subtitulo}</h4>
+                                            <p>{item.Descricao}</p>
+                                        </a>
+                                    </li>
+                                </React.Fragment>
+                        )
+                    }
                 </ul>
             </div>
         )

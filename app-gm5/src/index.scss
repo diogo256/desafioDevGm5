@@ -34,6 +34,35 @@ h4{
   font-size: 18px;
   font-weight: 500;
 }
+.btn-loader {
+	padding-top: 0;
+	padding-bottom: 0;
+	font-size: 0;
+	position: relative;
+}
+.btn-loader[data-working=true] {
+	padding-right: 55px;
+}
+.btn-loader span {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 44px;
+	display: inline-block;
+	vertical-align: top;
+}
+.btn-loader .loader {
+	transform: scale(.6);
+    position: absolute;
+    top: -19px;
+    bottom: 0;
+    right: 10px;
+    margin: auto;
+}
+.btn-loader[data-state='DONE'] {
+	pointer-events: none;
+	user-select: none;
+}
+
 @media (max-width: 767px) {
   h2{
     font-size: 7vw;
