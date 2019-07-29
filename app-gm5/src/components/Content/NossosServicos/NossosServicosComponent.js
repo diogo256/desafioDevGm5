@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 import './NossosServicos.scss'
+import { URLS } from '../../../common/constants';
 
 class NossosServicos extends Component{
     constructor(props){
@@ -22,7 +23,7 @@ class NossosServicos extends Component{
         })
 
 
-        axios.get('http://localhost:3001/Servico').then(response => {
+        axios.get(URLS.LISTAR_SERVICOS).then(response => {
             this.setState({
                 estaCarregando: false,
                 listaNossoServicos: response.data

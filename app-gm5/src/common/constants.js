@@ -1,3 +1,3 @@
 export const URLS = {
-    LISTAR_SERVICOS: '../../../static/image/'
+    LISTAR_SERVICOS: 'https://demo9205233.mockable.io/servico'
 }
