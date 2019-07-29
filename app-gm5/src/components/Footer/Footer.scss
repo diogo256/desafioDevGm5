@@ -1,0 +1,118 @@
+@import '../../static/scss/constants.scss';
+
+
+@import url($importFonteSemiBold);
+
+footer{
+    clear: both;
+    overflow: hidden;
+    font-family: $fonteDefault;
+}
+.footer{
+    border-top: 5px solid $azul;
+    clear: both;
+    padding: 30px 0 10px;
+    overflow: hidden;  
+    color: $cinza;  
+    nav{
+        ul{
+            margin: 0;
+            text-align: left;
+            li{
+                display: block;
+                margin-left: 0;
+                a{
+                    &:hover{
+                        color: $roxo;
+                    }
+                    display: block;
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+    strong{
+        font-size: 18px;
+        color: $roxo;
+    }
+    .dadosempresa{
+        p{
+            font-size: 16px;
+            font-weight: 600;
+        }
+        a{
+            &:hover{
+                text-decoration: underline;
+                color: $roxo;
+            }
+            display: block;
+            margin: 16px 0;
+            color: $cinza;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
+    .redesociais{
+        strong{
+            margin-bottom: 30px;
+            display: block;
+        }
+        ul{
+            overflow: hidden;
+            margin-bottom: 30px;
+            li{
+                float: left;
+                margin-right: 15px;
+                a{
+                    display: block;
+                    font-size: 0;
+                    width: 23px;
+                    height: 23px;
+                    background-repeat: no-repeat;
+                }
+                &.facebook{
+                    a{
+                        background-image: url("../../static/image/facebook-f-brands.svg");
+                    }
+                }
+                &.instagram{
+                    a{
+                        background-image: url("../../static/image/instagram-brands.svg");
+                    }
+                }
+                &.linkedin{
+                    a{
+                        background-image: url("../../static/image/linkedin-in-brands.svg");
+                    }
+                }
+                &.twitter{
+                    a{
+                        background-image: url("../../static/image/twitter-brands.svg");
+                    }
+                }
+            }
+        }
+        p{
+            font-weight: 700;
+            font-size: 14px;
+            display: block;
+            clear: both;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .footer {
+        text-align: center;
+        .redesociais{
+            ul {
+                li{
+                    float: none;
+                    display: inline-block;
+                }
+            }
+            
+        }
+    }
+  }

@@ -1,0 +1,68 @@
+@import '../../../static/scss/constants.scss';
+
+.nossoservico{    
+    h2{
+        padding: 0;        
+    }
+    ul{
+        margin-top: 20px;
+        li{
+            a{
+                text-decoration: none;
+                .imgservico{
+                    img{
+                        max-width: 100%;
+                    }
+                }
+                h3{
+                    clear: both;
+                    padding-top: 40px;
+                    margin-bottom: 15px;
+                }
+                h4{
+                    margin-bottom: 15px;
+                }
+                p{
+                    font-family: $fonteDefault;
+                    color: $cinza;
+                    font-size: 13px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .row{
+        margin: auto;
+    }
+    .nossoservico{
+        padding: 0;
+        margin-bottom: 12vw;
+        [class*="col-"] {
+            padding-right: 0;
+            padding-left: 0;
+        }
+        ul{
+            li{
+                text-align: center;
+                a{
+                    p{
+                        font-size: 4vw;
+                    }
+                    h3{
+                        padding-top: 8.4vw;
+                        margin: 0;
+                    }
+                    h4{
+                        margin-top: 4.2vw;
+                    }
+                    p{
+                        margin: 4vw 0;
+                    }
+                }
+            }
+        }
+    }
+}

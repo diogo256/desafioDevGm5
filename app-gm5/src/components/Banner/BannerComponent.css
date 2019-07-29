@@ -1,0 +1,6 @@
+.banner{
+    background: url('../../static/image/banner.jpg') no-repeat center center;
+    height: 420px;
+    margin-bottom: 80px;
+    background-size: cover;
+}
