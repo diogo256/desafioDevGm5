@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/desafioDevGm5/static/css/main.90512d72.chunk.css",
+    "main.js": "/desafioDevGm5/static/js/main.c0981775.chunk.js",
+    "main.js.map": "/desafioDevGm5/static/js/main.c0981775.chunk.js.map",
+    "runtime~main.js": "/desafioDevGm5/static/js/runtime~main.bacfe355.js",
+    "runtime~main.js.map": "/desafioDevGm5/static/js/runtime~main.bacfe355.js.map",
+    "static/js/2.e34fdfaa.chunk.js": "/desafioDevGm5/static/js/2.e34fdfaa.chunk.js",
+    "static/js/2.e34fdfaa.chunk.js.map": "/desafioDevGm5/static/js/2.e34fdfaa.chunk.js.map",
+    "index.html": "/desafioDevGm5/index.html",
+    "precache-manifest.b6bf9457a8f4e9406cad2ab1d24672d8.js": "/desafioDevGm5/precache-manifest.b6bf9457a8f4e9406cad2ab1d24672d8.js",
+    "service-worker.js": "/desafioDevGm5/service-worker.js",
+    "static/css/main.90512d72.chunk.css.map": "/desafioDevGm5/static/css/main.90512d72.chunk.css.map",
+    "static/media/banner.jpg": "/desafioDevGm5/static/media/banner.1b4e59cb.jpg",
+    "static/media/Footer.scss": "/desafioDevGm5/static/media/twitter-brands.6620c8ae.svg"
+  }
+}
