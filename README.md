@@ -29,6 +29,11 @@ my-app/
 
 Url Local [http://localhost:3000](http://localhost:3000).
 
+### `npm mock`
+
+`Foi utilizado o json-server`
+A url do servidor Local [http://localhost:3001](http://localhost:3001).
+
 ## Supported Browsers
 
 Referência [to the React documentation](https://reactjs.org/docs/react-dom.html#browser-support)
