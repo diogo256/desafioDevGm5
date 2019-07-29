@@ -2,6 +2,7 @@
   "name": "app-gm5",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/diogo256/desafioDevGm5/",
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "axios": "^0.19.0",
@@ -15,6 +16,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "mock": "json-server mock/db.json --watch --port 3001 --delay 500",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -33,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
   }
 }
